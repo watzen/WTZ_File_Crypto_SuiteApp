@@ -1,5 +1,8 @@
 # WTZ_File_Crypto_SuiteApp
 A proof of concept for Encrypting and Decrypting files using OpenPGP in Netsuite with the OpenPGP.js library.
+It works ok for files around 1mb. One 2mb pdf that I tried failed. There can absolutely be issues with encoding.
+I have tested it to work with UTF-8 encoded text-files.
+
 Beware, there are many flaws in the design. 
 * No restart of processing M/R script if more queue records are created while it is still processing the first batch
 * Keys are stored in plain-text (maybe they could be encrypted using NS-encryption functions and a key stored in the API Secrets that is bundled.
