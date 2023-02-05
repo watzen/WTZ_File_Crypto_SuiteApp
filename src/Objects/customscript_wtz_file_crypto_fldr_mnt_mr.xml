@@ -1,0 +1,30 @@
+<mapreducescript scriptid="customscript_wtz_file_crypto_fldr_mnt_mr">
+  <description>This script searches for job setup records and then looks for files in the folders that are set in the setup record. It then creates queue-records for each file.</description>
+  <isinactive>F</isinactive>
+  <name>WTZ File Crypto Folder Monitor MR</name>
+  <notifyadmins>F</notifyadmins>
+  <notifyemails></notifyemails>
+  <notifyowner>T</notifyowner>
+  <scriptfile>[/SuiteApps/com.netsuite.wtzfilecrypto/SuiteScripts/WTZ File Crypto Folder Monitor MR.js]</scriptfile>
+  <scriptdeployments>
+    <scriptdeployment scriptid="customdeploy_wtz_file_crypto_fldr_mnt_mr">
+      <buffersize>1</buffersize>
+      <concurrencylimit></concurrencylimit>
+      <isdeployed>T</isdeployed>
+      <loglevel>DEBUG</loglevel>
+      <queueallstagesatonce>F</queueallstagesatonce>
+      <runasrole>ADMINISTRATOR</runasrole>
+      <status>SCHEDULED</status>
+      <title>WTZ File Crypto Folder Monitor MR</title>
+      <yieldaftermins>60</yieldaftermins>
+      <recurrence>
+        <daily>
+          <everyxdays>1</everyxdays>
+          <repeat>PT15M</repeat>
+          <startdate>2023-02-04</startdate>
+          <starttime>00:00:00Z</starttime>
+        </daily>
+      </recurrence>
+    </scriptdeployment>
+  </scriptdeployments>
+</mapreducescript>

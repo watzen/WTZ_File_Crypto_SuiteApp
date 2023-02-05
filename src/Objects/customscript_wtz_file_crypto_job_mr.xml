@@ -1,0 +1,29 @@
+<mapreducescript scriptid="customscript_wtz_file_crypto_job_mr">
+  <description>This script takes all queue records and processes them</description>
+  <isinactive>F</isinactive>
+  <name>WTZ File Crypto Job MR</name>
+  <notifyadmins>F</notifyadmins>
+  <notifyemails></notifyemails>
+  <notifyowner>T</notifyowner>
+  <scriptfile>[/SuiteApps/com.netsuite.wtzfilecrypto/SuiteScripts/WTZ File Crypto Job MR.js]</scriptfile>
+  <scriptdeployments>
+    <scriptdeployment scriptid="customdeploy_wtz_file_crypto_job_mr">
+      <buffersize>1</buffersize>
+      <concurrencylimit></concurrencylimit>
+      <isdeployed>T</isdeployed>
+      <loglevel>DEBUG</loglevel>
+      <queueallstagesatonce>T</queueallstagesatonce>
+      <runasrole>ADMINISTRATOR</runasrole>
+      <status>NOTSCHEDULED</status>
+      <title>WTZ File Crypto Job MR</title>
+      <yieldaftermins>60</yieldaftermins>
+      <recurrence>
+        <single>
+          <repeat></repeat>
+          <startdate>2020-10-28</startdate>
+          <starttime>01:00:00Z</starttime>
+        </single>
+      </recurrence>
+    </scriptdeployment>
+  </scriptdeployments>
+</mapreducescript>

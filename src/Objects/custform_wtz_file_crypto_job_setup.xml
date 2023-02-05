@@ -1,0 +1,310 @@
+<entryForm scriptid="custform_wtz_file_crypto_job_setup" standard="STANDARDCUSTOMRECORD_WTZ_FILE_CRYPTO_JOB_SETUPFORM">
+  <name>WTZ File Crypto Job Setup Form</name>
+  <recordType>[scriptid=customrecord_wtz_file_crypto_job_setup]</recordType>
+  <inactive>F</inactive>
+  <preferred>T</preferred>
+  <storedWithRecord>F</storedWithRecord>
+  <mainFields>
+    <fieldGroup scriptid="fieldgroup_2_t1173961_478">
+      <label>Main info</label>
+      <visible>T</visible>
+      <showTitle>T</showTitle>
+      <singleColumn>F</singleColumn>
+      <fields position="MIDDLE">
+        <field>
+          <id>NAME</id>
+          <label>Name</label>
+          <visible>T</visible>
+          <mandatory>T</mandatory>
+          <displayType>NORMAL</displayType>
+          <columnBreak>F</columnBreak>
+          <sameRowAsPrevious>F</sameRowAsPrevious>
+        </field>
+        <field>
+          <id>[scriptid=customrecord_wtz_file_crypto_job_setup.custrecord_wtz_file_crypto_setup_type]</id>
+          <label>Encryption Type</label>
+          <visible>T</visible>
+          <mandatory>F</mandatory>
+          <displayType>NORMAL</displayType>
+          <columnBreak>F</columnBreak>
+          <sameRowAsPrevious>F</sameRowAsPrevious>
+        </field>
+        <field>
+          <id>[scriptid=customrecord_wtz_file_crypto_job_setup.custrecord_wtz_file_crypto_s_encrypt]</id>
+          <label>Encrypt</label>
+          <visible>T</visible>
+          <mandatory>F</mandatory>
+          <displayType>NORMAL</displayType>
+          <columnBreak>F</columnBreak>
+          <sameRowAsPrevious>F</sameRowAsPrevious>
+        </field>
+        <field>
+          <id>[scriptid=customrecord_wtz_file_crypto_job_setup.custrecord_wtz_file_crypto_s_inpt_fldr]</id>
+          <label>File Input/Monitor Folder</label>
+          <visible>T</visible>
+          <mandatory>T</mandatory>
+          <displayType>NORMAL</displayType>
+          <columnBreak>F</columnBreak>
+          <sameRowAsPrevious>F</sameRowAsPrevious>
+        </field>
+        <field>
+          <id>[scriptid=customrecord_wtz_file_crypto_job_setup.custrecord_wtz_file_crypto_s_outpt_fldr]</id>
+          <label>File Output Folder</label>
+          <visible>T</visible>
+          <mandatory>T</mandatory>
+          <displayType>NORMAL</displayType>
+          <columnBreak>F</columnBreak>
+          <sameRowAsPrevious>F</sameRowAsPrevious>
+        </field>
+        <field>
+          <id>[scriptid=customrecord_wtz_file_crypto_job_setup.custrecord_wtz_file_crypto_s_copy_orig]</id>
+          <label>Store a copy of the original file</label>
+          <visible>T</visible>
+          <mandatory>F</mandatory>
+          <displayType>NORMAL</displayType>
+          <columnBreak>F</columnBreak>
+          <sameRowAsPrevious>F</sameRowAsPrevious>
+        </field>
+        <field>
+          <id>[scriptid=customrecord_wtz_file_crypto_job_setup.custrecord_wtz_file_crypto_s_cpy_org_fld]</id>
+          <label>Folder for copy of original file</label>
+          <visible>T</visible>
+          <mandatory>F</mandatory>
+          <displayType>NORMAL</displayType>
+          <columnBreak>F</columnBreak>
+          <sameRowAsPrevious>T</sameRowAsPrevious>
+        </field>
+        <field>
+          <id>[scriptid=customrecord_wtz_file_crypto_job_setup.custrecord_wtz_file_crypto_s_err_fld]</id>
+          <label>Folder for erroneous files</label>
+          <visible>T</visible>
+          <mandatory>T</mandatory>
+          <displayType>NORMAL</displayType>
+          <columnBreak>F</columnBreak>
+          <sameRowAsPrevious>F</sameRowAsPrevious>
+        </field>
+      </fields>
+    </fieldGroup>
+    <fieldGroup scriptid="fieldgroup_3_t1173961_730">
+      <label>Crypto Keys (Administrator only)</label>
+      <visible>T</visible>
+      <showTitle>T</showTitle>
+      <singleColumn>F</singleColumn>
+      <fields position="MIDDLE">
+        <field>
+          <id>[scriptid=customrecord_wtz_file_crypto_job_setup.custrecord_wtz_file_crypto_priv_key_pass]</id>
+          <label>Private key passphrase</label>
+          <visible>T</visible>
+          <mandatory>F</mandatory>
+          <displayType>NORMAL</displayType>
+          <columnBreak>F</columnBreak>
+          <sameRowAsPrevious>F</sameRowAsPrevious>
+        </field>
+        <field>
+          <id>[scriptid=customrecord_wtz_file_crypto_job_setup.custrecord_wtz_file_crypto_setup_privkey]</id>
+          <label>Decryption Private Key</label>
+          <visible>T</visible>
+          <mandatory>F</mandatory>
+          <displayType>NORMAL</displayType>
+          <columnBreak>F</columnBreak>
+          <sameRowAsPrevious>F</sameRowAsPrevious>
+        </field>
+        <field>
+          <id>[scriptid=customrecord_wtz_file_crypto_job_setup.custrecord_wtz_file_crypto_setup_dpubkey]</id>
+          <label>Decryption Public Key</label>
+          <visible>T</visible>
+          <mandatory>F</mandatory>
+          <displayType>NORMAL</displayType>
+          <columnBreak>F</columnBreak>
+          <sameRowAsPrevious>F</sameRowAsPrevious>
+        </field>
+        <field>
+          <id>[scriptid=customrecord_wtz_file_crypto_job_setup.custrecord_wtz_file_crypto_setup_epubkey]</id>
+          <label>Encryption Public Key</label>
+          <visible>T</visible>
+          <mandatory>F</mandatory>
+          <displayType>NORMAL</displayType>
+          <columnBreak>F</columnBreak>
+          <sameRowAsPrevious>F</sameRowAsPrevious>
+        </field>
+      </fields>
+    </fieldGroup>
+    <defaultFieldGroup>
+      <fields position="MIDDLE">
+        <field>
+          <id>LASTMODIFIED</id>
+          <label>Last Modified</label>
+          <visible>T</visible>
+          <mandatory>T</mandatory>
+          <displayType>NORMAL</displayType>
+          <columnBreak>F</columnBreak>
+          <sameRowAsPrevious>F</sameRowAsPrevious>
+        </field>
+        <field>
+          <id>CREATED</id>
+          <label>Date Created</label>
+          <visible>T</visible>
+          <mandatory>T</mandatory>
+          <displayType>NORMAL</displayType>
+          <columnBreak>F</columnBreak>
+          <sameRowAsPrevious>F</sameRowAsPrevious>
+        </field>
+        <field>
+          <id>OWNER</id>
+          <label>Owner</label>
+          <visible>T</visible>
+          <mandatory>T</mandatory>
+          <displayType>NORMAL</displayType>
+          <columnBreak>F</columnBreak>
+          <sameRowAsPrevious>F</sameRowAsPrevious>
+        </field>
+        <field>
+          <id>CUSTOMFORM</id>
+          <label>Custom Form</label>
+          <visible>F</visible>
+          <mandatory>T</mandatory>
+          <displayType>NORMAL</displayType>
+          <columnBreak>F</columnBreak>
+          <sameRowAsPrevious>F</sameRowAsPrevious>
+        </field>
+        <field>
+          <id>RECORDID</id>
+          <label>ID</label>
+          <visible>T</visible>
+          <mandatory>T</mandatory>
+          <displayType>NORMAL</displayType>
+          <columnBreak>F</columnBreak>
+          <sameRowAsPrevious>F</sameRowAsPrevious>
+        </field>
+        <field>
+          <id>ISINACTIVE</id>
+          <label>Inactive</label>
+          <visible>T</visible>
+          <mandatory>F</mandatory>
+          <displayType>NORMAL</displayType>
+          <columnBreak>F</columnBreak>
+          <sameRowAsPrevious>F</sameRowAsPrevious>
+        </field>
+        <field>
+          <id>PARENT</id>
+          <label>Parent</label>
+          <visible>F</visible>
+          <mandatory>F</mandatory>
+          <displayType>NORMAL</displayType>
+          <columnBreak>F</columnBreak>
+          <sameRowAsPrevious>F</sameRowAsPrevious>
+        </field>
+      </fields>
+    </defaultFieldGroup>
+  </mainFields>
+  <tabs>
+    <tab>
+      <id>RECORDMEDIA</id>
+      <label>Files</label>
+      <visible>T</visible>
+      <fieldGroups>
+        <defaultFieldGroup/>
+      </fieldGroups>
+      <subItems>
+        <subList>
+          <id>RECORDMEDIAITEM</id>
+          <label>Files</label>
+          <visible>T</visible>
+          <neverEmpty>F</neverEmpty>
+        </subList>
+      </subItems>
+    </tab>
+    <tab>
+      <id>RECORDWORKFLOW</id>
+      <label>Workflow</label>
+      <visible>T</visible>
+      <fieldGroups>
+        <defaultFieldGroup/>
+      </fieldGroups>
+      <subItems>
+        <subList>
+          <id>RECORDACTIVEWORKFLOWS</id>
+          <label>Active Workflows</label>
+          <visible>T</visible>
+          <neverEmpty>F</neverEmpty>
+        </subList>
+        <subList>
+          <id>RECORDWORKFLOWHISTORY</id>
+          <label>Workflow History</label>
+          <visible>T</visible>
+          <neverEmpty>F</neverEmpty>
+        </subList>
+      </subItems>
+    </tab>
+    <tab>
+      <id>RECORDTRANSLATION</id>
+      <label>Translation</label>
+      <visible>T</visible>
+      <fieldGroups>
+        <defaultFieldGroup/>
+      </fieldGroups>
+      <subItems>
+        <subList>
+          <id>RECORDTRANSLATIONS</id>
+          <label>Translation</label>
+          <visible>T</visible>
+          <neverEmpty>F</neverEmpty>
+        </subList>
+      </subItems>
+    </tab>
+    <tab>
+      <id>RECORDCUSTOM</id>
+      <label>Custom</label>
+      <visible>T</visible>
+      <fieldGroups>
+        <defaultFieldGroup/>
+      </fieldGroups>
+      <subItems/>
+    </tab>
+  </tabs>
+  <actionbar>
+    <menu>
+      <menuitem>
+        <id>DELETE</id>
+        <label>Delete</label>
+        <visible>T</visible>
+      </menuitem>
+      <menuitem>
+        <id>MAKECOPY</id>
+        <label>Make Copy</label>
+        <visible>T</visible>
+      </menuitem>
+      <menuitem>
+        <id>NEW</id>
+        <label>New</label>
+        <visible>T</visible>
+      </menuitem>
+      <menuitem>
+        <id>PRINT</id>
+        <label>Print</label>
+        <visible>T</visible>
+      </menuitem>
+      <menuitem>
+        <id>SUBMITCOPY</id>
+        <label>Save &amp; Copy</label>
+        <visible>T</visible>
+      </menuitem>
+      <menuitem>
+        <id>SUBMITNEW</id>
+        <label>Save &amp; New</label>
+        <visible>T</visible>
+      </menuitem>
+      <menuitem>
+        <id>SUBMITNEXT</id>
+        <label>Save &amp; Next</label>
+        <visible>T</visible>
+      </menuitem>
+      <menuitem>
+        <id>SUBMITAS</id>
+        <label>Save As</label>
+        <visible>T</visible>
+      </menuitem>
+    </menu>
+  </actionbar>
+  <editingInList>T</editingInList>
+</entryForm>

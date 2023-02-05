@@ -1,0 +1,640 @@
+<customrecordtype scriptid="customrecord_wtz_file_crypto_job_setup">
+  <accesstype>CUSTRECORDENTRYPERM</accesstype>
+  <allowattachments>T</allowattachments>
+  <allowinlinedeleting>F</allowinlinedeleting>
+  <allowinlinedetaching>T</allowinlinedetaching>
+  <allowinlineediting>F</allowinlineediting>
+  <allowmobileaccess>F</allowmobileaccess>
+  <allownumberingoverride>F</allownumberingoverride>
+  <allowquickadd>F</allowquickadd>
+  <allowquicksearch>F</allowquicksearch>
+  <allowuiaccess>T</allowuiaccess>
+  <customsegment></customsegment>
+  <description>This record hold the setup for the different types of encryption needs for the organisation.</description>
+  <enabledle>F</enabledle>
+  <enablekeywords>F</enablekeywords>
+  <enablemailmerge>F</enablemailmerge>
+  <enablenametranslation>F</enablenametranslation>
+  <enablenumbering>F</enablenumbering>
+  <enableoptimisticlocking>T</enableoptimisticlocking>
+  <enablesystemnotes>T</enablesystemnotes>
+  <hierarchical>F</hierarchical>
+  <icon></icon>
+  <iconbuiltin>T</iconbuiltin>
+  <iconindex></iconindex>
+  <includeinsearchmenu>F</includeinsearchmenu>
+  <includename>T</includename>
+  <isinactive>F</isinactive>
+  <isordered>F</isordered>
+  <numberinginit></numberinginit>
+  <numberingmindigits></numberingmindigits>
+  <numberingprefix></numberingprefix>
+  <numberingsuffix></numberingsuffix>
+  <recordname>WTZ File Crypto Job Setup</recordname>
+  <showcreationdate>T</showcreationdate>
+  <showcreationdateonlist>T</showcreationdateonlist>
+  <showid>F</showid>
+  <showlastmodified>T</showlastmodified>
+  <showlastmodifiedonlist>T</showlastmodifiedonlist>
+  <shownotes>F</shownotes>
+  <showowner>T</showowner>
+  <showownerallowchange>F</showownerallowchange>
+  <showowneronlist>F</showowneronlist>
+  <customrecordcustomfields>
+    <customrecordcustomfield scriptid="custrecord_wtz_file_crypto_setup_type">
+      <accesslevel>2</accesslevel>
+      <allowquickadd>F</allowquickadd>
+      <applyformatting>F</applyformatting>
+      <checkspelling>F</checkspelling>
+      <defaultchecked>F</defaultchecked>
+      <defaultselection></defaultselection>
+      <defaultvalue></defaultvalue>
+      <description>Select which type of encryption that should be used.</description>
+      <displayheight></displayheight>
+      <displaytype>NORMAL</displaytype>
+      <displaywidth></displaywidth>
+      <dynamicdefault></dynamicdefault>
+      <encryptatrest>F</encryptatrest>
+      <fieldtype>SELECT</fieldtype>
+      <globalsearch>F</globalsearch>
+      <help>Select which type of encryption that should be used.</help>
+      <isformula>F</isformula>
+      <ismandatory>F</ismandatory>
+      <isparent>F</isparent>
+      <label>Encryption Type</label>
+      <linktext></linktext>
+      <maxlength></maxlength>
+      <maxvalue></maxvalue>
+      <minvalue></minvalue>
+      <onparentdelete>NO_ACTION</onparentdelete>
+      <parentsubtab></parentsubtab>
+      <rolerestrict>F</rolerestrict>
+      <searchcomparefield></searchcomparefield>
+      <searchdefault></searchdefault>
+      <searchlevel>2</searchlevel>
+      <selectrecordtype>[scriptid=customrecord_wtz_file_crypto_types]</selectrecordtype>
+      <showinlist>T</showinlist>
+      <sourcefilterby></sourcefilterby>
+      <sourcefrom></sourcefrom>
+      <sourcelist></sourcelist>
+      <storevalue>T</storevalue>
+      <subtab></subtab>
+    </customrecordcustomfield>
+    <customrecordcustomfield scriptid="custrecord_wtz_file_crypto_s_encrypt">
+      <accesslevel>2</accesslevel>
+      <allowquickadd>F</allowquickadd>
+      <applyformatting>F</applyformatting>
+      <checkspelling>F</checkspelling>
+      <defaultchecked>F</defaultchecked>
+      <defaultselection></defaultselection>
+      <defaultvalue></defaultvalue>
+      <description>Check this box to indicate that the input file should be encrypted. Otherwise it will try to decrypt the file.</description>
+      <displayheight></displayheight>
+      <displaytype>NORMAL</displaytype>
+      <displaywidth></displaywidth>
+      <dynamicdefault></dynamicdefault>
+      <encryptatrest>F</encryptatrest>
+      <fieldtype>CHECKBOX</fieldtype>
+      <globalsearch>F</globalsearch>
+      <help>Check this box to indicate that the input file should be encrypted. Otherwise it will try to decrypt the file.</help>
+      <isformula>F</isformula>
+      <ismandatory>F</ismandatory>
+      <isparent>F</isparent>
+      <label>Encrypt</label>
+      <linktext></linktext>
+      <maxlength></maxlength>
+      <maxvalue></maxvalue>
+      <minvalue></minvalue>
+      <onparentdelete></onparentdelete>
+      <parentsubtab></parentsubtab>
+      <rolerestrict>F</rolerestrict>
+      <searchcomparefield></searchcomparefield>
+      <searchdefault></searchdefault>
+      <searchlevel>2</searchlevel>
+      <selectrecordtype></selectrecordtype>
+      <showinlist>F</showinlist>
+      <sourcefilterby></sourcefilterby>
+      <sourcefrom></sourcefrom>
+      <sourcelist></sourcelist>
+      <storevalue>T</storevalue>
+      <subtab></subtab>
+    </customrecordcustomfield>
+    <customrecordcustomfield scriptid="custrecord_wtz_file_crypto_s_inpt_fldr">
+      <accesslevel>2</accesslevel>
+      <allowquickadd>F</allowquickadd>
+      <applyformatting>F</applyformatting>
+      <checkspelling>F</checkspelling>
+      <defaultchecked>F</defaultchecked>
+      <defaultselection></defaultselection>
+      <defaultvalue></defaultvalue>
+      <description>Enter the internal ID of the folder that you want to monitor for new files. Each Crypto Setup record needs its own folder to be able to process them differently.&#xd;
+The folder monitoring is optional, leave this blank if you don&apos;t want this job setup-record to look for new files in a directory.&#xd;
+Other ways of initiating the encryption is through Workflow Actions.</description>
+      <displayheight></displayheight>
+      <displaytype>NORMAL</displaytype>
+      <displaywidth></displaywidth>
+      <dynamicdefault></dynamicdefault>
+      <encryptatrest>F</encryptatrest>
+      <fieldtype>INTEGER</fieldtype>
+      <globalsearch>F</globalsearch>
+      <help>Enter the internal ID of the folder that you want to monitor for new files. Each Crypto Setup record needs its own folder to be able to process them differently.&#xd;
+The folder monitoring is optional, leave this blank if you don&apos;t want this job setup-record to look for new files in a directory.&#xd;
+Other ways of initiating the encryption is through Workflow Actions.</help>
+      <isformula>F</isformula>
+      <ismandatory>F</ismandatory>
+      <isparent>F</isparent>
+      <label>File Input/Monitor Folder</label>
+      <linktext></linktext>
+      <maxlength></maxlength>
+      <maxvalue></maxvalue>
+      <minvalue></minvalue>
+      <onparentdelete></onparentdelete>
+      <parentsubtab></parentsubtab>
+      <rolerestrict>F</rolerestrict>
+      <searchcomparefield></searchcomparefield>
+      <searchdefault></searchdefault>
+      <searchlevel>2</searchlevel>
+      <selectrecordtype></selectrecordtype>
+      <showinlist>F</showinlist>
+      <sourcefilterby></sourcefilterby>
+      <sourcefrom></sourcefrom>
+      <sourcelist></sourcelist>
+      <storevalue>T</storevalue>
+      <subtab></subtab>
+    </customrecordcustomfield>
+    <customrecordcustomfield scriptid="custrecord_wtz_file_crypto_s_outpt_fldr">
+      <accesslevel>2</accesslevel>
+      <allowquickadd>F</allowquickadd>
+      <applyformatting>F</applyformatting>
+      <checkspelling>F</checkspelling>
+      <defaultchecked>F</defaultchecked>
+      <defaultselection></defaultselection>
+      <defaultvalue></defaultvalue>
+      <description>Set the internal id of a folder for the output file. If this field is empty, the file will remain in the original folder.</description>
+      <displayheight></displayheight>
+      <displaytype>NORMAL</displaytype>
+      <displaywidth></displaywidth>
+      <dynamicdefault></dynamicdefault>
+      <encryptatrest>F</encryptatrest>
+      <fieldtype>INTEGER</fieldtype>
+      <globalsearch>F</globalsearch>
+      <help>Set the internal id of a folder for the output file. If this field is empty, the file will remain in the original folder.</help>
+      <isformula>F</isformula>
+      <ismandatory>F</ismandatory>
+      <isparent>F</isparent>
+      <label>File Output Folder</label>
+      <linktext></linktext>
+      <maxlength></maxlength>
+      <maxvalue></maxvalue>
+      <minvalue></minvalue>
+      <onparentdelete></onparentdelete>
+      <parentsubtab></parentsubtab>
+      <rolerestrict>F</rolerestrict>
+      <searchcomparefield></searchcomparefield>
+      <searchdefault></searchdefault>
+      <searchlevel>2</searchlevel>
+      <selectrecordtype></selectrecordtype>
+      <showinlist>F</showinlist>
+      <sourcefilterby></sourcefilterby>
+      <sourcefrom></sourcefrom>
+      <sourcelist></sourcelist>
+      <storevalue>T</storevalue>
+      <subtab></subtab>
+    </customrecordcustomfield>
+    <customrecordcustomfield scriptid="custrecord_wtz_file_crypto_s_copy_orig">
+      <accesslevel>2</accesslevel>
+      <allowquickadd>F</allowquickadd>
+      <applyformatting>F</applyformatting>
+      <checkspelling>F</checkspelling>
+      <defaultchecked>F</defaultchecked>
+      <defaultselection></defaultselection>
+      <defaultvalue></defaultvalue>
+      <description>If this box is checked, a copy of the original file will be created the chosen folder.</description>
+      <displayheight></displayheight>
+      <displaytype>NORMAL</displaytype>
+      <displaywidth></displaywidth>
+      <dynamicdefault></dynamicdefault>
+      <encryptatrest>F</encryptatrest>
+      <fieldtype>CHECKBOX</fieldtype>
+      <globalsearch>F</globalsearch>
+      <help>If this box is checked, a copy of the original file will be created the chosen folder.</help>
+      <isformula>F</isformula>
+      <ismandatory>F</ismandatory>
+      <isparent>F</isparent>
+      <label>Store a copy of the original file</label>
+      <linktext></linktext>
+      <maxlength></maxlength>
+      <maxvalue></maxvalue>
+      <minvalue></minvalue>
+      <onparentdelete></onparentdelete>
+      <parentsubtab></parentsubtab>
+      <rolerestrict>F</rolerestrict>
+      <searchcomparefield></searchcomparefield>
+      <searchdefault></searchdefault>
+      <searchlevel>2</searchlevel>
+      <selectrecordtype></selectrecordtype>
+      <showinlist>F</showinlist>
+      <sourcefilterby></sourcefilterby>
+      <sourcefrom></sourcefrom>
+      <sourcelist></sourcelist>
+      <storevalue>T</storevalue>
+      <subtab></subtab>
+    </customrecordcustomfield>
+    <customrecordcustomfield scriptid="custrecord_wtz_file_crypto_s_cpy_org_fld">
+      <accesslevel>2</accesslevel>
+      <allowquickadd>F</allowquickadd>
+      <applyformatting>F</applyformatting>
+      <checkspelling>F</checkspelling>
+      <defaultchecked>F</defaultchecked>
+      <defaultselection></defaultselection>
+      <defaultvalue></defaultvalue>
+      <description>Enter an internal id for a folder where you want to store the copy of the original file.</description>
+      <displayheight></displayheight>
+      <displaytype>NORMAL</displaytype>
+      <displaywidth></displaywidth>
+      <dynamicdefault></dynamicdefault>
+      <encryptatrest>F</encryptatrest>
+      <fieldtype>INTEGER</fieldtype>
+      <globalsearch>F</globalsearch>
+      <help>Enter an internal id for a folder where you want to store the copy of the original file.</help>
+      <isformula>F</isformula>
+      <ismandatory>F</ismandatory>
+      <isparent>F</isparent>
+      <label>Folder for copy of original file </label>
+      <linktext></linktext>
+      <maxlength></maxlength>
+      <maxvalue></maxvalue>
+      <minvalue></minvalue>
+      <onparentdelete></onparentdelete>
+      <parentsubtab></parentsubtab>
+      <rolerestrict>F</rolerestrict>
+      <searchcomparefield></searchcomparefield>
+      <searchdefault></searchdefault>
+      <searchlevel>2</searchlevel>
+      <selectrecordtype></selectrecordtype>
+      <showinlist>F</showinlist>
+      <sourcefilterby></sourcefilterby>
+      <sourcefrom></sourcefrom>
+      <sourcelist></sourcelist>
+      <storevalue>T</storevalue>
+      <subtab></subtab>
+    </customrecordcustomfield>
+    <customrecordcustomfield scriptid="custrecord_wtz_file_crypto_s_err_fld">
+      <accesslevel>2</accesslevel>
+      <allowquickadd>F</allowquickadd>
+      <applyformatting>F</applyformatting>
+      <checkspelling>F</checkspelling>
+      <defaultchecked>F</defaultchecked>
+      <defaultselection></defaultselection>
+      <defaultvalue></defaultvalue>
+      <description>Enter an internal id for a folder where you want to store the files that fail.</description>
+      <displayheight></displayheight>
+      <displaytype>NORMAL</displaytype>
+      <displaywidth></displaywidth>
+      <dynamicdefault></dynamicdefault>
+      <encryptatrest>F</encryptatrest>
+      <fieldtype>INTEGER</fieldtype>
+      <globalsearch>F</globalsearch>
+      <help>Enter an internal id for a folder where you want to store the files that fail.</help>
+      <isformula>F</isformula>
+      <ismandatory>F</ismandatory>
+      <isparent>F</isparent>
+      <label>Folder for erroneous files</label>
+      <linktext></linktext>
+      <maxlength></maxlength>
+      <maxvalue></maxvalue>
+      <minvalue></minvalue>
+      <onparentdelete></onparentdelete>
+      <parentsubtab></parentsubtab>
+      <rolerestrict>F</rolerestrict>
+      <searchcomparefield></searchcomparefield>
+      <searchdefault></searchdefault>
+      <searchlevel>2</searchlevel>
+      <selectrecordtype></selectrecordtype>
+      <showinlist>F</showinlist>
+      <sourcefilterby></sourcefilterby>
+      <sourcefrom></sourcefrom>
+      <sourcelist></sourcelist>
+      <storevalue>T</storevalue>
+      <subtab></subtab>
+    </customrecordcustomfield>
+    <customrecordcustomfield scriptid="custrecord_wtz_file_crypto_setup_epubkey">
+      <accesslevel>0</accesslevel>
+      <allowquickadd>F</allowquickadd>
+      <applyformatting>F</applyformatting>
+      <checkspelling>F</checkspelling>
+      <defaultchecked>F</defaultchecked>
+      <defaultselection></defaultselection>
+      <defaultvalue></defaultvalue>
+      <description>This is the id for the public key used in encrypting files. This is normally supplied by the receiving party.</description>
+      <displayheight>15</displayheight>
+      <displaytype>NORMAL</displaytype>
+      <displaywidth>70</displaywidth>
+      <dynamicdefault></dynamicdefault>
+      <encryptatrest>F</encryptatrest>
+      <fieldtype>CLOBTEXT</fieldtype>
+      <globalsearch>F</globalsearch>
+      <help>This is the id for the public key used in encrypting files. This is normally supplied by the receiving party.</help>
+      <isformula>F</isformula>
+      <ismandatory>F</ismandatory>
+      <isparent>F</isparent>
+      <label>Encryption Public Key</label>
+      <linktext></linktext>
+      <maxlength></maxlength>
+      <maxvalue></maxvalue>
+      <minvalue></minvalue>
+      <onparentdelete></onparentdelete>
+      <parentsubtab></parentsubtab>
+      <rolerestrict>F</rolerestrict>
+      <searchcomparefield></searchcomparefield>
+      <searchdefault></searchdefault>
+      <searchlevel>0</searchlevel>
+      <selectrecordtype></selectrecordtype>
+      <showinlist>F</showinlist>
+      <sourcefilterby></sourcefilterby>
+      <sourcefrom></sourcefrom>
+      <sourcelist></sourcelist>
+      <storevalue>T</storevalue>
+      <subtab></subtab>
+      <roleaccesses>
+        <roleaccess>
+          <accesslevel>2</accesslevel>
+          <role>ADMINISTRATOR</role>
+          <searchlevel>2</searchlevel>
+        </roleaccess>
+      </roleaccesses>
+    </customrecordcustomfield>
+    <customrecordcustomfield scriptid="custrecord_wtz_file_crypto_priv_key_pass">
+      <accesslevel>0</accesslevel>
+      <allowquickadd>F</allowquickadd>
+      <applyformatting>F</applyformatting>
+      <checkspelling>F</checkspelling>
+      <defaultchecked>F</defaultchecked>
+      <defaultselection></defaultselection>
+      <defaultvalue></defaultvalue>
+      <description>This is the passphrase that was used for generating the private decryption key.</description>
+      <displayheight></displayheight>
+      <displaytype>NORMAL</displaytype>
+      <displaywidth></displaywidth>
+      <dynamicdefault></dynamicdefault>
+      <encryptatrest>F</encryptatrest>
+      <fieldtype>TEXT</fieldtype>
+      <globalsearch>F</globalsearch>
+      <help>This is the passphrase that was used for generating the private decryption key.</help>
+      <isformula>F</isformula>
+      <ismandatory>F</ismandatory>
+      <isparent>F</isparent>
+      <label>Private key passphrase</label>
+      <linktext></linktext>
+      <maxlength></maxlength>
+      <maxvalue></maxvalue>
+      <minvalue></minvalue>
+      <onparentdelete></onparentdelete>
+      <parentsubtab></parentsubtab>
+      <rolerestrict>F</rolerestrict>
+      <searchcomparefield></searchcomparefield>
+      <searchdefault></searchdefault>
+      <searchlevel>0</searchlevel>
+      <selectrecordtype></selectrecordtype>
+      <showinlist>F</showinlist>
+      <sourcefilterby></sourcefilterby>
+      <sourcefrom></sourcefrom>
+      <sourcelist></sourcelist>
+      <storevalue>T</storevalue>
+      <subtab></subtab>
+      <roleaccesses>
+        <roleaccess>
+          <accesslevel>2</accesslevel>
+          <role>ADMINISTRATOR</role>
+          <searchlevel>2</searchlevel>
+        </roleaccess>
+      </roleaccesses>
+    </customrecordcustomfield>
+    <customrecordcustomfield scriptid="custrecord_wtz_file_crypto_setup_privkey">
+      <accesslevel>0</accesslevel>
+      <allowquickadd>F</allowquickadd>
+      <applyformatting>F</applyformatting>
+      <checkspelling>F</checkspelling>
+      <defaultchecked>F</defaultchecked>
+      <defaultselection></defaultselection>
+      <defaultvalue></defaultvalue>
+      <description>This is the id for the private key used in decrypting files. This needs to be created using a key generator.</description>
+      <displayheight>12</displayheight>
+      <displaytype>NORMAL</displaytype>
+      <displaywidth>70</displaywidth>
+      <dynamicdefault></dynamicdefault>
+      <encryptatrest>F</encryptatrest>
+      <fieldtype>CLOBTEXT</fieldtype>
+      <globalsearch>F</globalsearch>
+      <help>This is the id for the private key used in decrypting files. This needs to be created using a key generator.</help>
+      <isformula>F</isformula>
+      <ismandatory>F</ismandatory>
+      <isparent>F</isparent>
+      <label>Decryption Private Key</label>
+      <linktext></linktext>
+      <maxlength></maxlength>
+      <maxvalue></maxvalue>
+      <minvalue></minvalue>
+      <onparentdelete></onparentdelete>
+      <parentsubtab></parentsubtab>
+      <rolerestrict>F</rolerestrict>
+      <searchcomparefield></searchcomparefield>
+      <searchdefault></searchdefault>
+      <searchlevel>0</searchlevel>
+      <selectrecordtype></selectrecordtype>
+      <showinlist>F</showinlist>
+      <sourcefilterby></sourcefilterby>
+      <sourcefrom></sourcefrom>
+      <sourcelist></sourcelist>
+      <storevalue>T</storevalue>
+      <subtab></subtab>
+      <roleaccesses>
+        <roleaccess>
+          <accesslevel>2</accesslevel>
+          <role>ADMINISTRATOR</role>
+          <searchlevel>2</searchlevel>
+        </roleaccess>
+      </roleaccesses>
+    </customrecordcustomfield>
+    <customrecordcustomfield scriptid="custrecord_wtz_file_crypto_setup_dpubkey">
+      <accesslevel>0</accesslevel>
+      <allowquickadd>F</allowquickadd>
+      <applyformatting>F</applyformatting>
+      <checkspelling>F</checkspelling>
+      <defaultchecked>F</defaultchecked>
+      <defaultselection></defaultselection>
+      <defaultvalue></defaultvalue>
+      <description>This is the id for the public key used in decrypting files. This needs to be generated with a key-generator</description>
+      <displayheight>15</displayheight>
+      <displaytype>NORMAL</displaytype>
+      <displaywidth>70</displaywidth>
+      <dynamicdefault></dynamicdefault>
+      <encryptatrest>F</encryptatrest>
+      <fieldtype>CLOBTEXT</fieldtype>
+      <globalsearch>F</globalsearch>
+      <help>This is the id for the public key used in decrypting files. This needs to be generated with a key-generator</help>
+      <isformula>F</isformula>
+      <ismandatory>F</ismandatory>
+      <isparent>F</isparent>
+      <label>Decryption Public Key</label>
+      <linktext></linktext>
+      <maxlength></maxlength>
+      <maxvalue></maxvalue>
+      <minvalue></minvalue>
+      <onparentdelete></onparentdelete>
+      <parentsubtab></parentsubtab>
+      <rolerestrict>F</rolerestrict>
+      <searchcomparefield></searchcomparefield>
+      <searchdefault></searchdefault>
+      <searchlevel>0</searchlevel>
+      <selectrecordtype></selectrecordtype>
+      <showinlist>F</showinlist>
+      <sourcefilterby></sourcefilterby>
+      <sourcefrom></sourcefrom>
+      <sourcelist></sourcelist>
+      <storevalue>T</storevalue>
+      <subtab></subtab>
+      <roleaccesses>
+        <roleaccess>
+          <accesslevel>2</accesslevel>
+          <role>ADMINISTRATOR</role>
+          <searchlevel>2</searchlevel>
+        </roleaccess>
+      </roleaccesses>
+    </customrecordcustomfield>
+  </customrecordcustomfields>
+  <instances>
+    <instance scriptid="val_285700_t1173961_550">
+      <custrecord_wtz_file_crypto_priv_key_pass>password</custrecord_wtz_file_crypto_priv_key_pass>
+      <custrecord_wtz_file_crypto_s_copy_orig>F</custrecord_wtz_file_crypto_s_copy_orig>
+      <custrecord_wtz_file_crypto_s_cpy_org_fld>1425</custrecord_wtz_file_crypto_s_cpy_org_fld>
+      <custrecord_wtz_file_crypto_s_encrypt>T</custrecord_wtz_file_crypto_s_encrypt>
+      <custrecord_wtz_file_crypto_s_inpt_fldr>1423</custrecord_wtz_file_crypto_s_inpt_fldr>
+      <custrecord_wtz_file_crypto_s_outpt_fldr>1541</custrecord_wtz_file_crypto_s_outpt_fldr>
+      <custrecord_wtz_file_crypto_setup_dpubkey>-----BEGIN PGP PUBLIC KEY BLOCK-----&#xd;
+Version: OpenPGP.js v4.5.2&#xd;
+Comment: https://openpgpjs.org&#xd;
+&#xd;
+xk0EX4s+JQECALHyDkjtRrB9nvc5DD6Swdyi0rQc/x3Yxt6iP08OUt+UimkG&#xd;
+jfAP/LmwTi5DrhLviE98fiDBzRljjb5zLS7rtJMAEQEAAc0UYmlsbCA8Ymls&#xd;
+bEBob21lLmNvbT7CdQQQAQgAHwUCX4s+JQYLCQcIAwIEFQgKAgMWAgECGQEC&#xd;
+GwMCHgEACgkQ1Y9hTVbPxV3RoAH+MqJq9OSfW+n9vVrzSfSHiF3sTN08T2o8&#xd;
+xU9tz4yEOuEdmVLZdrzFGYm5XyI7VO9UEhiqkKXCMRrg/EQli9yysM5NBF+L&#xd;
+PiUBAf9ViMyeyYldp3puNUqdCFXEJiFGKqpk05X264gwAtJ1soNFZ1OJtr0J&#xd;
+N6yPl4g/io+T8bw9F2We4RxpsgUImn0jABEBAAHCXwQYAQgACQUCX4s+JQIb&#xd;
+DAAKCRDVj2FNVs/FXbUQAgCvCuHeJW7sag4rjQE0Nn7AV0Hhrlha7QLbu9BC&#xd;
+kTVZ7e8arsNUbLTixF3T7+uLYaxMzRhxBMeiJxqIdk1hIPa/&#xd;
+=F5HS&#xd;
+-----END PGP PUBLIC KEY BLOCK-----</custrecord_wtz_file_crypto_setup_dpubkey>
+      <custrecord_wtz_file_crypto_setup_epubkey>-----BEGIN PGP PUBLIC KEY BLOCK-----&#xd;
+Version: OpenPGP.js v4.5.2&#xd;
+Comment: https://openpgpjs.org&#xd;
+&#xd;
+xk0EX4s+JQECALHyDkjtRrB9nvc5DD6Swdyi0rQc/x3Yxt6iP08OUt+UimkG&#xd;
+jfAP/LmwTi5DrhLviE98fiDBzRljjb5zLS7rtJMAEQEAAc0UYmlsbCA8Ymls&#xd;
+bEBob21lLmNvbT7CdQQQAQgAHwUCX4s+JQYLCQcIAwIEFQgKAgMWAgECGQEC&#xd;
+GwMCHgEACgkQ1Y9hTVbPxV3RoAH+MqJq9OSfW+n9vVrzSfSHiF3sTN08T2o8&#xd;
+xU9tz4yEOuEdmVLZdrzFGYm5XyI7VO9UEhiqkKXCMRrg/EQli9yysM5NBF+L&#xd;
+PiUBAf9ViMyeyYldp3puNUqdCFXEJiFGKqpk05X264gwAtJ1soNFZ1OJtr0J&#xd;
+N6yPl4g/io+T8bw9F2We4RxpsgUImn0jABEBAAHCXwQYAQgACQUCX4s+JQIb&#xd;
+DAAKCRDVj2FNVs/FXbUQAgCvCuHeJW7sag4rjQE0Nn7AV0Hhrlha7QLbu9BC&#xd;
+kTVZ7e8arsNUbLTixF3T7+uLYaxMzRhxBMeiJxqIdk1hIPa/&#xd;
+=F5HS&#xd;
+-----END PGP PUBLIC KEY BLOCK-----</custrecord_wtz_file_crypto_setup_epubkey>
+      <custrecord_wtz_file_crypto_setup_privkey>-----BEGIN PGP PRIVATE KEY BLOCK-----&#xd;
+Version: OpenPGP.js v4.5.2&#xd;
+Comment: https://openpgpjs.org&#xd;
+&#xd;
+xcBmBF+LPiUBAgCx8g5I7UawfZ73OQw+ksHcotK0HP8d2Mbeoj9PDlLflIpp&#xd;
+Bo3wD/y5sE4uQ64S74hPfH4gwc0ZY42+cy0u67STABEBAAH+CQMIbOGq4B5I&#xd;
+BqXg/S2xufEamp8ZQ0FwLFeeYDvDi0mbS0w9yNKmc5Fc3SmD7wtUupckqNEO&#xd;
+xWdn6nmEUXRGPLEtgae1GJvC5EbS60g6pmX+mq5T4L7wxqlDMd0PHFBhkcIY&#xd;
+C3Tn5WNdSWeBs659POYc1hAbpwIEK7LkDz0KwMqNXV4IzlqEazsQsdVw+pgr&#xd;
+42Mri8sWvUIUGFOsT+fKH+RDKcyt8kzMauliAxFOxeElh9XqM7p6/BedtA0q&#xd;
+MBAqvD7cUVQ+Js5QE29QyQHaGWZ5ih38ndKvzRRiaWxsIDxiaWxsQGhvbWUu&#xd;
+Y29tPsJ1BBABCAAfBQJfiz4lBgsJBwgDAgQVCAoCAxYCAQIZAQIbAwIeAQAK&#xd;
+CRDVj2FNVs/FXdGgAf4yomr05J9b6f29WvNJ9IeIXexM3TxPajzFT23PjIQ6&#xd;
+4R2ZUtl2vMUZiblfIjtU71QSGKqQpcIxGuD8RCWL3LKwx8BmBF+LPiUBAf9V&#xd;
+iMyeyYldp3puNUqdCFXEJiFGKqpk05X264gwAtJ1soNFZ1OJtr0JN6yPl4g/&#xd;
+io+T8bw9F2We4RxpsgUImn0jABEBAAH+CQMIYi9pIyYo/3fgkCKZXkwOiRw7&#xd;
+cPP9hswBTo1paQHSlgnShN91E0CHMhnJYCIWifX8dR9tw8FomTCF8Xs8zLOy&#xd;
+bYZBwMrJM7yYfaOII83Jpop6sJpoFuuDK7vezoa+zdYTBObmuA8xuom3+6YX&#xd;
+y6oFsb3Pdu8TBL4H7O9vj8Be71J5+SqFmTwYbImxPpJzFIU/8M1EJATE0ImM&#xd;
+fxaO6t5mTd+mALO//X2c+WkGDtBvClSesgkdiBYlkyU20tc8HfejjbIejSgx&#xd;
+qFdleaJNvB+syz0uuNDSwl8EGAEIAAkFAl+LPiUCGwwACgkQ1Y9hTVbPxV21&#xd;
+EAIArwrh3iVu7GoOK40BNDZ+wFdB4a5YWu0C27vQQpE1We3vGq7DVGy04sRd&#xd;
+0+/ri2GsTM0YcQTHoicaiHZNYSD2vw==&#xd;
+=cIyF&#xd;
+-----END PGP PRIVATE KEY BLOCK-----</custrecord_wtz_file_crypto_setup_privkey>
+      <custrecord_wtz_file_crypto_setup_type>[scriptid=customrecord_wtz_file_crypto_types.pgp]</custrecord_wtz_file_crypto_setup_type>
+      <isinactive>F</isinactive>
+      <name>Test Encrypt PGP</name>
+    </instance>
+    <instance scriptid="val_285718_t1173961_877">
+      <custrecord_wtz_file_crypto_priv_key_pass>password</custrecord_wtz_file_crypto_priv_key_pass>
+      <custrecord_wtz_file_crypto_s_copy_orig>F</custrecord_wtz_file_crypto_s_copy_orig>
+      <custrecord_wtz_file_crypto_s_cpy_org_fld>1543</custrecord_wtz_file_crypto_s_cpy_org_fld>
+      <custrecord_wtz_file_crypto_s_encrypt>F</custrecord_wtz_file_crypto_s_encrypt>
+      <custrecord_wtz_file_crypto_s_inpt_fldr>1541</custrecord_wtz_file_crypto_s_inpt_fldr>
+      <custrecord_wtz_file_crypto_s_outpt_fldr>1423</custrecord_wtz_file_crypto_s_outpt_fldr>
+      <custrecord_wtz_file_crypto_setup_dpubkey>-----BEGIN PGP PUBLIC KEY BLOCK-----&#xd;
+Version: OpenPGP.js v4.5.2&#xd;
+Comment: https://openpgpjs.org&#xd;
+&#xd;
+xk0EX4s+JQECALHyDkjtRrB9nvc5DD6Swdyi0rQc/x3Yxt6iP08OUt+UimkG&#xd;
+jfAP/LmwTi5DrhLviE98fiDBzRljjb5zLS7rtJMAEQEAAc0UYmlsbCA8Ymls&#xd;
+bEBob21lLmNvbT7CdQQQAQgAHwUCX4s+JQYLCQcIAwIEFQgKAgMWAgECGQEC&#xd;
+GwMCHgEACgkQ1Y9hTVbPxV3RoAH+MqJq9OSfW+n9vVrzSfSHiF3sTN08T2o8&#xd;
+xU9tz4yEOuEdmVLZdrzFGYm5XyI7VO9UEhiqkKXCMRrg/EQli9yysM5NBF+L&#xd;
+PiUBAf9ViMyeyYldp3puNUqdCFXEJiFGKqpk05X264gwAtJ1soNFZ1OJtr0J&#xd;
+N6yPl4g/io+T8bw9F2We4RxpsgUImn0jABEBAAHCXwQYAQgACQUCX4s+JQIb&#xd;
+DAAKCRDVj2FNVs/FXbUQAgCvCuHeJW7sag4rjQE0Nn7AV0Hhrlha7QLbu9BC&#xd;
+kTVZ7e8arsNUbLTixF3T7+uLYaxMzRhxBMeiJxqIdk1hIPa/&#xd;
+=F5HS&#xd;
+-----END PGP PUBLIC KEY BLOCK-----</custrecord_wtz_file_crypto_setup_dpubkey>
+      <custrecord_wtz_file_crypto_setup_epubkey>-----BEGIN PGP PUBLIC KEY BLOCK-----&#xd;
+Version: OpenPGP.js v4.5.2&#xd;
+Comment: https://openpgpjs.org&#xd;
+&#xd;
+xk0EX4s+JQECALHyDkjtRrB9nvc5DD6Swdyi0rQc/x3Yxt6iP08OUt+UimkG&#xd;
+jfAP/LmwTi5DrhLviE98fiDBzRljjb5zLS7rtJMAEQEAAc0UYmlsbCA8Ymls&#xd;
+bEBob21lLmNvbT7CdQQQAQgAHwUCX4s+JQYLCQcIAwIEFQgKAgMWAgECGQEC&#xd;
+GwMCHgEACgkQ1Y9hTVbPxV3RoAH+MqJq9OSfW+n9vVrzSfSHiF3sTN08T2o8&#xd;
+xU9tz4yEOuEdmVLZdrzFGYm5XyI7VO9UEhiqkKXCMRrg/EQli9yysM5NBF+L&#xd;
+PiUBAf9ViMyeyYldp3puNUqdCFXEJiFGKqpk05X264gwAtJ1soNFZ1OJtr0J&#xd;
+N6yPl4g/io+T8bw9F2We4RxpsgUImn0jABEBAAHCXwQYAQgACQUCX4s+JQIb&#xd;
+DAAKCRDVj2FNVs/FXbUQAgCvCuHeJW7sag4rjQE0Nn7AV0Hhrlha7QLbu9BC&#xd;
+kTVZ7e8arsNUbLTixF3T7+uLYaxMzRhxBMeiJxqIdk1hIPa/&#xd;
+=F5HS&#xd;
+-----END PGP PUBLIC KEY BLOCK-----</custrecord_wtz_file_crypto_setup_epubkey>
+      <custrecord_wtz_file_crypto_setup_privkey>-----BEGIN PGP PRIVATE KEY BLOCK-----&#xd;
+Version: OpenPGP.js v4.5.2&#xd;
+Comment: https://openpgpjs.org&#xd;
+&#xd;
+xcBmBF+LPiUBAgCx8g5I7UawfZ73OQw+ksHcotK0HP8d2Mbeoj9PDlLflIpp&#xd;
+Bo3wD/y5sE4uQ64S74hPfH4gwc0ZY42+cy0u67STABEBAAH+CQMIbOGq4B5I&#xd;
+BqXg/S2xufEamp8ZQ0FwLFeeYDvDi0mbS0w9yNKmc5Fc3SmD7wtUupckqNEO&#xd;
+xWdn6nmEUXRGPLEtgae1GJvC5EbS60g6pmX+mq5T4L7wxqlDMd0PHFBhkcIY&#xd;
+C3Tn5WNdSWeBs659POYc1hAbpwIEK7LkDz0KwMqNXV4IzlqEazsQsdVw+pgr&#xd;
+42Mri8sWvUIUGFOsT+fKH+RDKcyt8kzMauliAxFOxeElh9XqM7p6/BedtA0q&#xd;
+MBAqvD7cUVQ+Js5QE29QyQHaGWZ5ih38ndKvzRRiaWxsIDxiaWxsQGhvbWUu&#xd;
+Y29tPsJ1BBABCAAfBQJfiz4lBgsJBwgDAgQVCAoCAxYCAQIZAQIbAwIeAQAK&#xd;
+CRDVj2FNVs/FXdGgAf4yomr05J9b6f29WvNJ9IeIXexM3TxPajzFT23PjIQ6&#xd;
+4R2ZUtl2vMUZiblfIjtU71QSGKqQpcIxGuD8RCWL3LKwx8BmBF+LPiUBAf9V&#xd;
+iMyeyYldp3puNUqdCFXEJiFGKqpk05X264gwAtJ1soNFZ1OJtr0JN6yPl4g/&#xd;
+io+T8bw9F2We4RxpsgUImn0jABEBAAH+CQMIYi9pIyYo/3fgkCKZXkwOiRw7&#xd;
+cPP9hswBTo1paQHSlgnShN91E0CHMhnJYCIWifX8dR9tw8FomTCF8Xs8zLOy&#xd;
+bYZBwMrJM7yYfaOII83Jpop6sJpoFuuDK7vezoa+zdYTBObmuA8xuom3+6YX&#xd;
+y6oFsb3Pdu8TBL4H7O9vj8Be71J5+SqFmTwYbImxPpJzFIU/8M1EJATE0ImM&#xd;
+fxaO6t5mTd+mALO//X2c+WkGDtBvClSesgkdiBYlkyU20tc8HfejjbIejSgx&#xd;
+qFdleaJNvB+syz0uuNDSwl8EGAEIAAkFAl+LPiUCGwwACgkQ1Y9hTVbPxV21&#xd;
+EAIArwrh3iVu7GoOK40BNDZ+wFdB4a5YWu0C27vQQpE1We3vGq7DVGy04sRd&#xd;
+0+/ri2GsTM0YcQTHoicaiHZNYSD2vw==&#xd;
+=cIyF&#xd;
+-----END PGP PRIVATE KEY BLOCK-----</custrecord_wtz_file_crypto_setup_privkey>
+      <custrecord_wtz_file_crypto_setup_type>[scriptid=customrecord_wtz_file_crypto_types.pgp]</custrecord_wtz_file_crypto_setup_type>
+      <isinactive>F</isinactive>
+      <name>Test Decrypt PGP</name>
+    </instance>
+  </instances>
+</customrecordtype>
